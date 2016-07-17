@@ -5,19 +5,11 @@
 
     <groupId>com.whizzosoftware.osgi</groupId>
     <artifactId>rxtx-osgi</artifactId>
-    <version>2.1.7.1</version>
+    <version>2.2pre2.1</version>
     <packaging>bundle</packaging>
 
     <name>Serial Device based on RxTx</name>
     <description>An implementation of the serialdevice.api, based on RxTx</description>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.rxtx</groupId>
-            <artifactId>rxtx</artifactId>
-            <version>2.1.7</version>
-        </dependency>
-    </dependencies>
 
     <build>
         <plugins>
@@ -31,9 +23,6 @@
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Bundle-Name>${project.name}</Bundle-Name>
                         <Bundle-Version>${project.version}</Bundle-Version>
-                        <Embed-Dependency>
-                            rxtx;groupId=org.rxtx;artifactId=rxtx;version=${project.version}
-                        </Embed-Dependency>
                         <Include-Resource>
                             ${project.basedir}/src/main/lib
                         </Include-Resource>
@@ -43,7 +32,7 @@
                             Linux/linux64/librxtxSerial.so ; osname=linux ; processor=amd64,
                             Linux/sh4/librxtxSerial.so ; osname=linux ; processor=sh4,
                             Linux/mips/librxtxSerial.so ; osname=linux ; processor=mips,
-                            Linux/arm/librxtxSerial.so ; osname=Linux ; processor=arm,
+                            Linux/armv7l/librxtxSerial.so ; osname=Linux ; processor=armv7l,
                             <!-- Note: mac driver requires the /var/lock directory to be created with rw permission -->
                             Mac/mac64/librxtxSerial.dylib ; osname=MacOSX ; processor=x86_64,
                             Mac/mac64/librxtxSerial.dylib ; osname=Mac OS X ; processor=x86_64,
