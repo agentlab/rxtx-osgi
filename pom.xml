@@ -34,8 +34,8 @@
                             Linux/mips/librxtxSerial.so ; osname=linux ; processor=mips,
                             Linux/armv7l/librxtxSerial.so ; osname=Linux ; processor=armv7l,
                             <!-- Note: mac driver requires the /var/lock directory to be created with rw permission -->
-                            Mac/mac64/librxtxSerial.dylib ; osname=MacOSX ; processor=x86_64,
-                            Mac/mac64/librxtxSerial.dylib ; osname=Mac OS X ; processor=x86_64,
+                            Mac/mac64/librxtxSerial.jnilib ; osname=MacOSX ; processor=x86_64,
+                            Mac/mac64/librxtxSerial.jnilib ; osname=Mac OS X ; processor=x86_64,
                             Windows/win32/rxtxSerial.dll ; osname=Windows; osname=Windows 8; osname=Windows 7;
                             osname=Windows7; osname=Windows Vista; osname=Windows XP; osname=Windows NT;
                             processor=x86,
